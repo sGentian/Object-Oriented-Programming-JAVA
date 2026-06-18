@@ -34,7 +34,7 @@ public abstract class Account implements Comparable<Account> {
     }
 
 
-    //ede Unterklasse muss withdraw implementieren
+    //alle Unterklassen muss withdraw implementieren
     public abstract boolean withdraw(double amount);
 
     public boolean deposit(double amount) {

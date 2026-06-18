@@ -4,7 +4,7 @@ public interface MyList<T> {
 
     boolean add(T element);
 
-    T get(int idx);
+    T get(int index);
 
     int size();
 }

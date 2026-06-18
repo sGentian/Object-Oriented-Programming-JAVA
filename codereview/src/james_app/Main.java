@@ -22,6 +22,8 @@ public class Main {
         customers.add(customer3);
         customers.add(customer4);
         customers.add(customer5);
+
+
         customers.sort(new ComparatorNumber());
         System.out.println("sort by phone:");
         for (Customer c : customers){
@@ -50,6 +52,16 @@ public class Main {
         }
 
 
+        JamesSystem.printCustomers();
+
+        JoinedAccount account1 = new JoinedAccount(customer1, 1);
+
+        try {
+            account1.addCustomers(customer2);
+        }
+        catch (Exception e) {
+            System.out.printf("Fehler zur Runtime: " + e.getMessage());
+        }
 
 
 

@@ -14,6 +14,7 @@ public class JamesSystem {
     //constructor
     public JamesSystem() {
     }
+    static {init();}
 
     public static boolean add(Transaction tr){
         return  transactions.add(tr);
@@ -73,6 +74,15 @@ public class JamesSystem {
         }
         return map;
     }
+
+    public static void printCustomers () {
+        List<Customer> customerList = customers();
+        customerList.sort(new ComparatorEmail());
+        for (Customer customer : customerList) {
+            System.out.println("customers" + customer);
+        }
+    }
+
     private static void init(){
         customers.add(new Customer(1, "John Doe", "john@doe.com"));
         customers.add(new Customer(2, "Jane Doe", "jane@doe.com"));
